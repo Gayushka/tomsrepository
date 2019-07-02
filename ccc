@@ -2,7 +2,7 @@
 localPATH=`pwd`                          # path of current directory
 sep='---------------'
 #for d in */; do
-for d in {1..2}; do
+for d in {1..3}; do
   echo $sep"Checking Status of" $d$sep
   d=`echo $d | sed s#/##`                # remove trailing forward slash
   #git -C $localPATH/$d checkout master   # checkout master in different directory
@@ -15,7 +15,7 @@ for d in {1..2}; do
   git -C $localPATH/ commit -m 'hardyharhar'
   git -C $localPATH/ push
 
-  sleep 10  # or sleep +3m
+  sleep 30  # or sleep +3m
   
   echo -e '\n'
 done
